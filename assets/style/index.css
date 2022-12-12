@@ -65,7 +65,7 @@ nav ul li+li {
 }
 
 /* --------------- */
-/* Section          */
+/* banner          */
 /* --------------- */
 .banner {
     background: url(../img/editedBanner.jpg) center center / cover no-repeat;
@@ -97,23 +97,63 @@ section.hero-banner {
     height: 100vh;
 }
 
+/* --------------------Map------------------------------- */
+
 .map-main-box {
+    display: grid;
+    place-items: center;
     height: calc(100vh - 65px);
     width: 100%;
-    place-items: center;
+
+}
+
+.text {
+    height: 100px;
+    width: 100%;
     display: grid;
+    place-items: center;
+    font-size: 22px;
+    font-family: Madefor, Helvetica Neue, Helvetica, Arial, Hiragino Kaku Gothic Pro W3, Hiragino Kaku Gothic Pro, sans-serif !important;
+
 }
 
 .map-style {
     background-color: rgb(226, 220, 220);
-    width: 80%;
-    height: 400px;
-    /* background-color: #66bacf; */
+    width: min(100% - 30px, 1080px);
+    height: 100%;
+    display: grid;
+    place-items: center;
 
 }
 
 .mapboxgl-ctrl-logo {
-   visibility: hidden;
+    visibility: hidden;
+}
+
+/* ---------------------Loading box-------------------------- */
+
+.laoding {
+    display: none;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    border-top-color: rgb(226, 220, 220);
+    animation: laod 1s ease-in-out infinite;
+    -webkit-animation: load 1s ease-in-out infinite;
+}
+
+@keyframes load {
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes load {
+    to {
+        -webkit-transform: rotate(360deg);
+    }
 }
 
 /* -------------------------- */
@@ -178,6 +218,7 @@ section.hero-banner {
 }
 
 footer {
+    margin-top: 50px;
     height: 65px;
     background-color: #fff;
 }
